@@ -1,6 +1,6 @@
 /**
  * Vortex Digital Myanmar - Interactive UI Logic
- * Handles Smooth Scrolling, Sticky Navbar, Lightbox Modal Zoom, and Interactive Touches
+ * Handles Smooth Scrolling, Sticky Navbar, and Copy-to-Clipboard Simulation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,68 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Interactive Image Zoom Modal (Lightbox Logic)
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const imageWrappers = document.querySelectorAll('.image-wrapper');
-
-    // Open Lightbox when any step image is clicked
-    imageWrappers.forEach(wrapper => {
-        wrapper.addEventListener('click', () => {
-            const imgSrc = wrapper.getAttribute('data-image');
-            const captionText = wrapper.getAttribute('data-caption');
-
-            if (imgSrc) {
-                lightboxImg.src = imgSrc;
-                lightboxCaption.textContent = captionText || '';
-                
-                // Show modal with fade-in
-                lightbox.classList.remove('hidden');
-                // Trigger reflow for CSS transition
-                void lightbox.offsetWidth;
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            }
-        });
-    });
-
-    // Function to close lightbox
-    const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        setTimeout(() => {
-            lightbox.classList.add('hidden');
-            lightboxImg.src = '';
-            document.body.style.overflow = ''; // Restore scrolling
-        }, 300); // Match CSS transition duration
-    };
-
-    // Close on X button click
-    if (lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-    }
-
-    // Close on background (backdrop) click
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox || e.target.classList.contains('backdrop-blur-md')) {
-                closeLightbox();
-            }
-        });
-    }
-
-    // Close on Escape key press
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            closeLightbox();
-        }
-    });
-
-    // 4. Copy to Clipboard Simulation / Feedback for Step 2 Copy Box
-    const copyBox = document.querySelector('#step-2 .font-mono');
+    // 3. Copy to Clipboard Simulation / Feedback for Step 2 Copy Box
+    const copyBox = document.getElementById('copy-box');
     if (copyBox) {
-        copyBox.style.cursor = 'pointer';
         copyBox.title = 'Click to copy sample vless key';
         copyBox.addEventListener('click', () => {
             const sampleKey = "vless://a46890ef-fe6b-4cff-b4f8-b65628993c81@187.127.101.62:443?type=tcp&security=reality&pbk=Mq5qUM3K_jeGX8Cgbg0hY_tLESxdovwbKBfGpVys41I&fp=chrome&sni=amazon.com&sid=9dece5d16a&flow=xtls-rprx-vision#Vortex";
@@ -115,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Scroll IntersectionObserver for Step Cards Fade-In Animation
+    // 4. Scroll IntersectionObserver for Step Cards Fade-In Animation
     const stepCards = document.querySelectorAll('.step-card');
     const observerOptions = {
         root: null,
