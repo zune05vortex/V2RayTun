@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Vortex Digital Myanmar - Custom Stylesheet
+   Theme Palette extracted from Logo: Burnt Orange (#D9531E), Golden Amber (#F27A24),
+   Luxury Charcoal Black (#140D0A), Warm Off-White (#F5EBE6)
+   ========================================================================== */
+
+/* Root Variables for Custom Styling */
+:root {
+    --bg-main: #140D0A;
+    --bg-card: #1E1511;
+    --bg-card-hover: #261A14;
+    --border-color: #3D271D;
+    --accent-orange: #D9531E;
+    --accent-amber: #F27A24;
+    --accent-gold: #EBA036;
+    --text-main: #F5EBE6;
+    --text-muted: #C2B3AB;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3D271D;
+    border-radius: 5px;
+    border: 2px solid var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-orange);
+}
+
+/* Font Smoothing & Typography Overrides */
+body {
+    font-family: 'Inter', 'Padauk', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Burmese Text Line-Height Enhancement for Padauk font */
+h1, h2, h3, h4, p, span, div {
+    word-break: break-word;
+}
+
+/* Step Card Custom Animations & Hover Lift */
+.step-card {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(217, 83, 30, 0.15);
+}
+
+/* Image Wrapper Glow Effect on Hover */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+/* Lightbox Animation Classes */
+#lightbox.active {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+#lightbox.active #lightbox-img {
+    transform: scale(1) !important;
+}
+
+/* Download Button Click Feedback */
+.download-btn:active {
+    transform: scale(0.96);
+}
+
+/* Responsive Adjustments for Small Mobile Devices */
+@media (max-width: 480px) {
+    .step-card {
+        padding: 1.25rem;
+    }
+}
