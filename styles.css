@@ -44,11 +44,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Burmese Text Line-Height Enhancement for Padauk font */
-h1, h2, h3, h4, p, span, div {
-    word-break: break-word;
-}
-
 /* Step Card Custom Animations & Hover Lift */
 .step-card {
     position: relative;
@@ -58,31 +53,6 @@ h1, h2, h3, h4, p, span, div {
 .step-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px -15px rgba(217, 83, 30, 0.15);
-}
-
-/* Image Wrapper Glow Effect on Hover */
-.image-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.image-wrapper::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-}
-
-/* Lightbox Animation Classes */
-#lightbox.active {
-    display: flex !important;
-    opacity: 1 !important;
-}
-
-#lightbox.active #lightbox-img {
-    transform: scale(1) !important;
 }
 
 /* Download Button Click Feedback */
