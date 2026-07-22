@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Copy to Clipboard Simulation / Feedback for Step 2 Copy Box
     const copyBox = document.getElementById('copy-box');
     if (copyBox) {
+        copyBox.style.cursor = 'pointer';
         copyBox.title = 'Click to copy sample vless key';
         copyBox.addEventListener('click', () => {
             const sampleKey = "vless://a46890ef-fe6b-4cff-b4f8-b65628993c81@187.127.101.62:443?type=tcp&security=reality&pbk=Mq5qUM3K_jeGX8Cgbg0hY_tLESxdovwbKBfGpVys41I&fp=chrome&sni=amazon.com&sid=9dece5d16a&flow=xtls-rprx-vision#Vortex";
