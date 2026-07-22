@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="my" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Digital Myanmar - V2RayTun အသုံးပြုနည်း လမ်းညွှန်</title>
+    
+    <!-- Google Fonts: Inter & Padauk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vortex: {
+                            bg: '#140D0A',
+                            card: '#1E1511',
+                            cardHover: '#261A14',
+                            border: '#3D271D',
+                            orange: '#D9531E',
+                            amber: '#F27A24',
+                            gold: '#EBA036',
+                            text: '#F5EBE6',
+                            muted: '#C2B3AB',
+                            dark: '#0B0705'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Padauk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-vortex-bg text-vortex-text font-sans antialiased selection:bg-vortex-orange selection:text-white min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-vortex-dark/90 backdrop-blur-md border-b border-vortex-border transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-vortex-amber group-hover:border-vortex-gold transition-colors shadow-lg shadow-vortex-orange/20">
+                    <img src="logo.jpg" alt="Vortex Digital Myanmar Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg sm:text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-vortex-text via-vortex-gold to-vortex-amber">
+                        VORTEX DIGITAL
+                    </span>
+                    <span class="text-xs tracking-widest text-vortex-orange font-semibold uppercase">
+                        Myanmar
+                    </span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#hero" class="text-vortex-muted hover:text-vortex-gold transition-colors">ပင်မစာမျက်နှာ</a>
+                <a href="#steps" class="text-vortex-muted hover:text-vortex-gold transition-colors">လမ်းညွှန်အဆင့်များ</a>
+                <a href="#support" class="text-vortex-muted hover:text-vortex-gold transition-colors">အကူအညီရယူရန်</a>
+            </nav>
+
+            <a href="#steps" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-vortex-orange to-vortex-amber text-white font-medium text-sm shadow-lg shadow-vortex-orange/30 hover:shadow-vortex-orange/50 hover:scale-105 transition-all duration-200">
+                <span>စတင်တပ်ဆင်ရန်</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-12 pb-20 md:py-24 overflow-hidden">
+        <!-- Background Glow Accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-tr from-vortex-orange/20 to-vortex-amber/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vortex-card border border-vortex-border text-vortex-gold text-xs sm:text-sm font-medium mb-6 shadow-sm">
+                <i class="fa-solid fa-shield-halved text-vortex-orange animate-pulse"></i>
+                <span>မြန်နှုန်းမြင့် လုံခြုံစိတ်ချရသော အင်တာနက်ကွန်ရက်</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight sm:leading-tight mb-6">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-vortex-amber via-vortex-gold to-white">V2RayTun</span> အသုံးပြုနည်း<br class="hidden sm:inline"> လမ်းညွှန်
+            </h1>
+            
+            <p class="text-base sm:text-lg lg:text-xl text-vortex-muted max-w-2xl mx-auto leading-relaxed mb-10">
+                သင်၏ အင်တာနက်လိုင်းကို အပြည့်အဝ လုံခြုံမှုရှိစေရန်နှင့် မြန်နှုန်းမြင့် အင်တာနက်ကို အကန့်အသတ်မရှိ (Unrestricted) အသုံးပြုနိုင်ရန် အောက်ပါ အဆင့် (၆) ဆင့်အတိုင်း လွယ်ကူစွာ ထည့်သွင်း ချိတ်ဆက်အသုံးပြုနိုင်ပါသည်။
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#steps" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-vortex-orange via-vortex-amber to-vortex-gold text-white font-semibold text-base shadow-xl shadow-vortex-orange/25 hover:shadow-vortex-orange/40 hover:-translate-y-0.5 transition-all duration-200">
+                    <i class="fa-solid fa-book-open mr-2"></i>
+                    <span>အဆင့်ဆင့် လမ်းညွှန်ကို ကြည့်ရှုရန်</span>
+                </a>
+                <a href="#step-1" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-vortex-card hover:bg-vortex-cardHover text-vortex-text font-semibold text-base border border-vortex-border hover:border-vortex-gold/50 transition-all duration-200">
+                    <i class="fa-solid fa-download mr-2 text-vortex-amber"></i>
+                    <span>App ဒေါင်းလုဒ်ရယူရန်</span>
+                </a>
+            </div>
+
+            <!-- Quick Stats / Feature Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16 pt-10 border-t border-vortex-border/60 max-w-3xl mx-auto">
+                <div class="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-vortex-card/50">
+                    <div class="w-10 h-10 rounded-lg bg-vortex-orange/10 flex items-center justify-center text-vortex-orange">
+                        <i class="fa-solid fa-bolt text-lg"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-vortex-muted">Connection Speed</div>
+                        <div class="text-sm font-semibold text-white">High-Speed VLESS</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-vortex-card/50">
+                    <div class="w-10 h-10 rounded-lg bg-vortex-amber/10 flex items-center justify-center text-vortex-amber">
+                        <i class="fa-solid fa-lock text-lg"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-vortex-muted">Security Protocol</div>
+                        <div class="text-sm font-semibold text-white">100% Encrypted</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-vortex-card/50">
+                    <div class="w-10 h-10 rounded-lg bg-vortex-gold/10 flex items-center justify-center text-vortex-gold">
+                        <i class="fa-solid fa-infinity text-lg"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-vortex-muted">Bandwidth Limit</div>
+                        <div class="text-sm font-semibold text-white">Unrestricted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-Step Guide Section -->
+    <section id="steps" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow w-full">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-4xl font-bold text-white mb-4">
+                တပ်ဆင်အသုံးပြုနည်း <span class="text-vortex-gold">အဆင့် (၆) ဆင့်</span>
+            </h2>
+            <p class="text-vortex-muted max-w-xl mx-auto text-sm sm:text-base">
+                အောက်ပါ လမ်းညွှန်ချက်များနှင့် ပုံများကို တစ်ဆင့်ချင်း တိကျစွာ လိုက်နာဆောင်ရွက်ပါ။ (ပုံများကို နှိပ်၍ အကြီးကြည့်ရှုနိုင်ပါသည်)
+            </p>
+        </div>
+
+        <div class="space-y-12 relative">
+            <!-- Vertical Timeline Connecting Line (Desktop) -->
+            <div class="hidden md:block absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-vortex-orange via-vortex-border to-emerald-500 -translate-x-1/2 -z-10 opacity-30"></div>
+
+            <!-- Step 1 Card -->
+            <div id="step-1" class="step-card group bg-vortex-card rounded-2xl p-6 sm:p-8 border border-vortex-border hover:border-vortex-orange/60 transition-all duration-300 shadow-xl">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-vortex-orange to-vortex-amber text-white font-bold flex items-center justify-center text-lg shadow-md shadow-vortex-orange/30">1</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-vortex-amber">Step 01 / Download</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Application ဒေါင်းလုဒ် ရယူခြင်း</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            ပထမဦးစွာ သင့်ဖုန်း သို့မဟုတ် ကွန်ပျူတာတွင် VPN ချိတ်ဆက်အသုံးပြုရန်အတွက် <strong class="text-white">V2RayTun</strong> application ကို ထည့်သွင်း (Install) ရပါမည်။
+                        </p>
+                        
+                        <!-- Warning Box -->
+                        <div class="p-4 rounded-xl bg-amber-950/40 border-l-4 border-amber-500 text-amber-200 text-xs sm:text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-amber-300 mb-1">အရေးကြီး သတိပေးချက်</strong>
+                                လုံခြုံရေးနှင့် မြန်နှုန်း အပြည့်အဝ ရရှိစေရန်နှင့် အတုအပ Application များမှ ကင်းဝေးစေရန် တရားဝင် (Official) Application ကိုသာ ဒေါင်းလုဒ်လုပ်၍ အသုံးပြုပါ။
+                            </div>
+                        </div>
+
+                        <!-- Download Buttons -->
+                        <div class="pt-2">
+                            <div class="text-xs text-vortex-muted mb-3 font-medium">စနစ်အလိုက် ဒေါင်းလုဒ်ရယူရန် ရွေးချယ်ပါ -</div>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                                <a href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank" rel="noopener noreferrer" class="download-btn flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-vortex-bg hover:bg-vortex-orange text-white border border-vortex-border hover:border-vortex-orange text-xs font-medium transition-all duration-200">
+                                    <i class="fa-brands fa-android text-vortex-gold text-sm group-hover:text-white"></i>
+                                    <span>Android</span>
+                                </a>
+                                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="download-btn flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-vortex-bg hover:bg-vortex-orange text-white border border-vortex-border hover:border-vortex-orange text-xs font-medium transition-all duration-200">
+                                    <i class="fa-brands fa-apple text-vortex-gold text-sm"></i>
+                                    <span>iOS</span>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="download-btn flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-vortex-bg hover:bg-vortex-orange text-white border border-vortex-border hover:border-vortex-orange text-xs font-medium transition-all duration-200">
+                                    <i class="fa-brands fa-windows text-vortex-gold text-sm"></i>
+                                    <span>Windows</span>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="download-btn flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-vortex-bg hover:bg-vortex-orange text-white border border-vortex-border hover:border-vortex-orange text-xs font-medium transition-all duration-200">
+                                    <i class="fa-brands fa-apple text-vortex-gold text-sm"></i>
+                                    <span>macOS</span>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="download-btn flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-vortex-bg hover:bg-vortex-orange text-white border border-vortex-border hover:border-vortex-orange text-xs font-medium transition-all duration-200 col-span-2 sm:col-span-1">
+                                    <i class="fa-brands fa-linux text-vortex-gold text-sm"></i>
+                                    <span>Linux</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-vortex-border bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-vortex-orange/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step1.jpg" data-caption="Step 1: V2RayTun Official Application ကို ဒေါင်းလုဒ်လုပ်ခြင်း">
+                            <img src="step1.jpg" alt="Step 1 Guide - Download V2RayTun App" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-vortex-gold text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div id="step-2" class="step-card group bg-vortex-card rounded-2xl p-6 sm:p-8 border border-vortex-border hover:border-vortex-orange/60 transition-all duration-300 shadow-xl">
+                <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-vortex-orange to-vortex-amber text-white font-bold flex items-center justify-center text-lg shadow-md shadow-vortex-orange/30">2</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-vortex-amber">Step 02 / Copy Key</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">VPN Key (ကုဒ်) ကို ကူးယူခြင်း</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            Admin မှ သင့်အား ပေးပို့ထားသော <strong class="text-white">VLESS</strong> key ကုဒ်စာသား (<code class="text-vortex-gold bg-vortex-bg px-2 py-0.5 rounded text-xs font-mono">vless://...</code>) အပြည့်အစုံကို <strong class="text-white">Copy</strong> (ကူးယူ) လုပ်ပါ။
+                        </p>
+                        
+                        <!-- Warning Box -->
+                        <div class="p-4 rounded-xl bg-red-950/40 border-l-4 border-red-500 text-red-200 text-xs sm:text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-circle-exclamation text-red-400 text-lg flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-red-300 mb-1">အထူး သတိပြုရန်</strong>
+                                ကုဒ်စာသားကို အစမှ အဆုံးထိ စာလုံး သို့မဟုတ် စာကြောင်း တစ်ခုမျှ မကျန်စေဘဲ <strong class="underline decoration-red-400">အပြည့်အစုံ (Completely)</strong> ကူးယူရပါမည်။ စာလုံးတစ်လုံးမျှ ကျန်ခဲ့ပါက ချိတ်ဆက်မှု လုံးဝ (လုံးဝ) အောင်မြင်မည် မဟုတ်ပါ။
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-lg bg-vortex-bg/80 border border-vortex-border/80 flex items-center justify-between text-xs font-mono text-vortex-muted">
+                            <span class="truncate">vless://a46890ef-fe6b-4cff-b4f8...#Vortex</span>
+                            <span class="text-vortex-gold flex items-center gap-1 ml-2 font-sans font-medium flex-shrink-0">
+                                <i class="fa-regular fa-copy"></i> Copy အပြည့်အစုံကူးပါ
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-vortex-border bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-vortex-orange/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step2.jpg" data-caption="Step 2: Admin ပေးပို့သော VLESS Key ကုဒ်ကို အပြည့်အစုံ Copy ကူးယူခြင်း">
+                            <img src="step2.jpg" alt="Step 2 Guide - Copy VPN Key" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-vortex-gold text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div id="step-3" class="step-card group bg-vortex-card rounded-2xl p-6 sm:p-8 border border-vortex-border hover:border-vortex-orange/60 transition-all duration-300 shadow-xl">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-vortex-orange to-vortex-amber text-white font-bold flex items-center justify-center text-lg shadow-md shadow-vortex-orange/30">3</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-vortex-amber">Step 03 / Add Configuration</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">"+" Button ကို နှိပ်ခြင်း</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            ဖုန်း/ကွန်ပျူတာရှိ <strong class="text-white">V2RayTun</strong> app ကို ဖွင့်ပါ။ ထို့နောက် မျက်နှာပြင်၏ ညာဘက်အပေါ်ထောင့်ရှိ <strong class="text-vortex-gold">"+" (Add)</strong> button ကို နှိပ်ပါ။
+                        </p>
+                        
+                        <!-- Warning Box -->
+                        <div class="p-4 rounded-xl bg-amber-950/40 border-l-4 border-amber-500 text-amber-200 text-xs sm:text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-amber-300 mb-1">သတိပြုရန်</strong>
+                                အခြားသော Settings များကို လုံးဝ ပြုပြင်ပြောင်းလဲခြင်း မလုပ်ဘဲ ညာဘက်အပေါ်ထောင့်ဆုံးရှိ <strong class="text-white">"+"</strong> button ကိုသာ တိကျစွာ နှိပ်ပါ။
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-vortex-border bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-vortex-orange/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step3.jpg" data-caption="Step 3: App ညာဘက်အပေါ်ထောင့်ရှိ '+' Button ကို နှိပ်ခြင်း">
+                            <img src="step3.jpg" alt="Step 3 Guide - Click Plus Button" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-vortex-gold text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 Card -->
+            <div id="step-4" class="step-card group bg-vortex-card rounded-2xl p-6 sm:p-8 border border-vortex-border hover:border-vortex-orange/60 transition-all duration-300 shadow-xl">
+                <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-vortex-orange to-vortex-amber text-white font-bold flex items-center justify-center text-lg shadow-md shadow-vortex-orange/30">4</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-vortex-amber">Step 04 / Import Key</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Clipboard မှ Import လုပ်ခြင်း</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            "+" button နှိပ်ပြီးနောက် ပေါ်လာသော မီနူးများထဲမှ ထိပ်ဆုံးရှိ <strong class="text-vortex-gold bg-vortex-bg px-2.5 py-1 rounded inline-block border border-vortex-border my-1">"Import config from Clipboard"</strong> ကို ရွေးချယ်နှိပ်ပါ။ သင် Step 2 တွင် Copy ကူးယူထားသော key ကုဒ်မှာ အလိုအလျောက် ဝင်ရောက်သွားပါမည်။
+                        </p>
+                        
+                        <!-- Warning Box -->
+                        <div class="p-4 rounded-xl bg-amber-950/40 border-l-4 border-amber-500 text-amber-200 text-xs sm:text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-amber-300 mb-1">သတိပြုရန်</strong>
+                                ကုဒ်ကို Manual ရိုက်ထည့်ခြင်း သို့မဟုတ် ပြုပြင်ခြင်း မပြုဘဲ <strong class="text-white">"Import config from Clipboard"</strong> ကိုသာ ရွေးချယ်၍ အလိုအလျောက် ထည့်သွင်းပါ။
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-vortex-border bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-vortex-orange/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step4.jpg" data-caption="Step 4: 'Import config from Clipboard' ကို ရွေးချယ်ခြင်း">
+                            <img src="step4.jpg" alt="Step 4 Guide - Import config from Clipboard" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-vortex-gold text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 Card -->
+            <div id="step-5" class="step-card group bg-vortex-card rounded-2xl p-6 sm:p-8 border border-vortex-border hover:border-vortex-orange/60 transition-all duration-300 shadow-xl">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-vortex-orange to-vortex-amber text-white font-bold flex items-center justify-center text-lg shadow-md shadow-vortex-orange/30">5</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-vortex-amber">Step 05 / Connect</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">VPN ချိတ်ဆက်ခြင်း (Connect)</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            ကုဒ်စာသား ဝင်ရောက်သွားပြီးနောက် <strong class="text-white">Vortex</strong> server ပေါ်လာပါမည်။ မျက်နှာပြင် အလယ်ရှိ ကြီးမားသော <strong class="text-blue-400">Power Button</strong> (ခလုတ်အဝိုင်း) ကို နှိပ်၍ ချိတ်ဆက်မှု စတင်ပါ။
+                        </p>
+                        
+                        <!-- Warning Box -->
+                        <div class="p-4 rounded-xl bg-amber-950/40 border-l-4 border-amber-500 text-amber-200 text-xs sm:text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-bell text-amber-400 text-lg flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-amber-300 mb-1">သတိပြုရန် (System Permission)</strong>
+                                ပထမဆုံးအကြိမ် စတင်ချိတ်ဆက်ပါက သင့်ဖုန်း/စနစ်မှ Connection Request (ခွင့်ပြုချက်) တောင်းခံသည့် Box ပေါ်လာပါလိမ့်မည်။ <strong class="text-white">"OK"</strong> သို့မဟုတ် <strong class="text-white">"Allow"</strong> ကို နှိပ်၍ ခွင့်ပြုပေးပါ။
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-vortex-border bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-vortex-orange/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step5.jpg" data-caption="Step 5: အလယ်ရှိ Power Button ကို နှိပ်၍ ချိတ်ဆက်ခြင်း">
+                            <img src="step5.jpg" alt="Step 5 Guide - Click Power Button" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-vortex-gold text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 Card (Success) -->
+            <div id="step-6" class="step-card group bg-gradient-to-br from-vortex-card via-vortex-card to-emerald-950/30 rounded-2xl p-6 sm:p-8 border border-emerald-500/40 hover:border-emerald-500 transition-all duration-300 shadow-xl shadow-emerald-950/20">
+                <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                    <div class="w-full lg:w-1/2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white font-bold flex items-center justify-center text-lg shadow-md shadow-emerald-600/30">6</span>
+                            <span class="text-xs uppercase tracking-widest font-semibold text-emerald-400">Step 06 / Success</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">ချိတ်ဆက်မှု အောင်မြင်ခြင်း</h3>
+                        <p class="text-vortex-muted leading-relaxed text-sm sm:text-base">
+                            ခလုတ်အရောင်သည် <strong class="text-emerald-400">အစိမ်းရောင် (Green)</strong> သို့ ပြောင်းလဲသွားပြီး အောက်တွင် <strong class="text-white bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-500/30 inline-flex items-center gap-1.5 text-sm"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>Connected &gt;</strong> ဟူသော စာသား ပေါ်လာပါက ချိတ်ဆက်မှု အောင်မြင်စွာ ပြီးဆုံးပါပြီ။
+                        </p>
+                        
+                        <!-- Success Notice Box -->
+                        <div class="p-4 rounded-xl bg-emerald-950/50 border-l-4 border-emerald-500 text-emerald-100 text-xs sm:text-sm flex items-start gap-3 shadow-inner">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-xl flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="font-bold block text-emerald-300 mb-1">ဂုဏ်ယူပါသည်!</strong>
+                                ယခုအခါ သင်၏ အင်တာနက် ကွန်ရက်သည် <strong class="text-white">Vortex Digital Myanmar</strong> ၏ မြန်နှုန်းမြင့် ဆာဗာများနှင့် အပြည့်အဝ ချိတ်ဆက်မိသွားပြီဖြစ်ရာ လုံခြုံစိတ်ချစွာဖြင့်၊ ကန့်သတ်ချက်မရှိ (Unrestricted High-Speed) လွတ်လပ်စွာ အသုံးပြုနိုင်ပြီ ဖြစ်ပါသည်။
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Image -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="image-wrapper relative rounded-xl overflow-hidden border border-emerald-500/30 bg-vortex-dark cursor-pointer group-hover:shadow-lg group-hover:shadow-emerald-500/10 transition-all duration-300 aspect-video lg:aspect-auto flex items-center justify-center" data-image="step6.jpg" data-caption="Step 6: ချိတ်ဆက်မှု အောင်မြင်ပါက 'Connected' ဟု ပေါ်လာပါမည်">
+                            <img src="step6.jpg" alt="Step 6 Guide - Connected Success" class="w-full h-auto object-cover max-h-80 mx-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-emerald-400 text-lg"></i>
+                                <span>ပုံကိုနှိပ်၍ အကြီးကြည့်ရန်</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help & Support Section (Footer Notice) -->
+    <section id="support" class="mt-8 bg-gradient-to-t from-vortex-dark via-vortex-card/80 to-transparent pt-12 pb-16 border-t border-vortex-border">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-vortex-card to-vortex-dark border-2 border-vortex-orange/40 shadow-2xl relative overflow-hidden group hover:border-vortex-orange transition-colors">
+                <!-- Subtle corner glow -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-vortex-orange/10 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="w-16 h-16 rounded-full bg-vortex-orange/20 text-vortex-amber flex items-center justify-center mx-auto mb-6 text-2xl border border-vortex-orange/30 shadow-inner">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                    အကူအညီ လိုအပ်ပါသလား?
+                </h3>
+                
+                <p class="text-base sm:text-lg text-vortex-text max-w-xl mx-auto font-medium leading-relaxed bg-vortex-bg/60 p-5 rounded-xl border border-vortex-border/60">
+                    "အသုံးပြုရာတွင် တစ်စုံတစ်ရာ အခက်အခဲ သို့မဟုတ် အမှားအယွင်းများ ကြုံတွေ့ရပါက Admin သို့ တိုက်ရိုက် ဆက်သွယ် မေးမြန်းနိုင်ပါသည်။"
+                </p>
+
+                <p class="text-xs text-vortex-muted mt-6">
+                    &copy; 2026 VORTEX DIGITAL MYANMAR. All rights reserved. High-Speed Encrypted Network.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Image Zoom Modal (Lightbox) -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8" aria-modal="true" role="dialog">
+        <!-- Close button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-vortex-card/80 hover:bg-vortex-orange text-white border border-vortex-border flex items-center justify-center text-xl transition-all duration-200 z-50 shadow-lg hover:rotate-90" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Modal Content Container -->
+        <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center justify-center">
+            <img id="lightbox-img" src="" alt="Zoomed Step Guide" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl border border-vortex-border/80 transform scale-95 transition-transform duration-300">
+            <div id="lightbox-caption" class="mt-4 px-6 py-2.5 rounded-full bg-vortex-card/90 border border-vortex-border text-white text-sm sm:text-base font-medium shadow-lg text-center max-w-xl">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
