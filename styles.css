@@ -1,10 +1,9 @@
 /* ==========================================================================
-   Vortex Digital Myanmar - Custom Stylesheet
-   Theme Palette extracted from Logo: Burnt Orange (#D9531E), Golden Amber (#F27A24),
-   Luxury Charcoal Black (#140D0A), Warm Off-White (#F5EBE6)
+   Vortex Digital Myanmar - Upgraded Stylesheet (Bad-Ass Tech Edition)
+   Theme Palette: Burnt Orange (#D9531E), Golden Amber (#F27A24), Luxury Dark (#140D0A)
    ========================================================================== */
 
-/* Root Variables for Custom Styling */
+/* Root Variables */
 :root {
     --bg-main: #140D0A;
     --bg-card: #1E1511;
@@ -21,22 +20,19 @@
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--bg-main);
 }
-
 ::-webkit-scrollbar-thumb {
     background: #3D271D;
     border-radius: 5px;
     border: 2px solid var(--bg-main);
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-orange);
 }
 
-/* Font Smoothing & Typography Overrides */
+/* Base Setup */
 body {
     font-family: 'Inter', 'Padauk', sans-serif;
     background-color: var(--bg-main);
@@ -44,23 +40,100 @@ body {
     overflow-x: hidden;
 }
 
-/* Step Card Custom Animations & Hover Lift */
-.step-card {
+/* ==========================================================================
+   ADVANCED VISUAL EFFECTS & ANIMATIONS
+   ========================================================================== */
+
+/* 1. Shimmer Button Animation */
+.btn-shimmer {
     position: relative;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+.btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer-sweep 3.5s infinite linear;
+}
+@keyframes shimmer-sweep {
+    0% { left: -100%; }
+    40% { left: 150%; }
+    100% { left: 150%; }
 }
 
-.step-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -15px rgba(217, 83, 30, 0.15);
+/* 2. Step Badges Pulse Glow */
+.step-badge {
+    animation: badge-pulse 2.5s infinite ease-in-out;
+}
+@keyframes badge-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(217, 83, 30, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(217, 83, 30, 0); }
 }
 
-/* Download Button Click Feedback */
+/* 3. Mouse-Following Cursor Spotlight (SaaS Card Effect) */
+.spotlight-card {
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.spotlight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px -12px rgba(217, 83, 30, 0.25);
+    border-color: rgba(242, 122, 36, 0.6);
+}
+.spotlight-card:hover .spotlight-glow {
+    opacity: 1;
+}
+.spotlight-glow {
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+        rgba(217, 83, 30, 0.15),
+        transparent 40%
+    );
+}
+
+/* 4. Ambient Hero Background Parallax Breathing */
+.ambient-glow-1 {
+    animation: float-slow 8s infinite alternate ease-in-out;
+}
+.ambient-glow-2 {
+    animation: float-slow-reverse 10s infinite alternate ease-in-out;
+}
+@keyframes float-slow {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-48%, -52%) scale(1.15); }
+}
+@keyframes float-slow-reverse {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* 5. Warning Box Subtle Border Glow */
+.warning-box {
+    transition: all 0.3s ease;
+}
+.warning-box:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 6. Photo Wrapper Neon Border Hover */
+.photo-wrapper {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+}
+.step-card:hover .photo-wrapper {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(235, 160, 54, 0.15);
+}
+
+/* Download Button Active Tap Feedback */
 .download-btn:active {
-    transform: scale(0.96);
+    transform: scale(0.95);
 }
 
-/* Responsive Adjustments for Small Mobile Devices */
+/* Mobile Responsive Tweaks */
 @media (max-width: 480px) {
     .step-card {
         padding: 1.25rem;
