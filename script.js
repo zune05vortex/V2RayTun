@@ -1,6 +1,6 @@
 /**
  * Vortex Digital Myanmar - Interactive UI Logic
- * Handles Smooth Scrolling, Sticky Navbar, and Copy-to-Clipboard Simulation
+ * Handles Smooth Scrolling and Sticky Navbar
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,26 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Copy to Clipboard Simulation / Feedback for Step 2 Copy Box
-    const copyBox = document.getElementById('copy-box');
-    if (copyBox) {
-        copyBox.style.cursor = 'pointer';
-        copyBox.title = 'Click to copy sample vless key';
-        copyBox.addEventListener('click', () => {
-            const sampleKey = "vless://a46890ef-fe6b-4cff-b4f8-b65628993c81@187.127.101.62:443?type=tcp&security=reality&pbk=Mq5qUM3K_jeGX8Cgbg0hY_tLESxdovwbKBfGpVys41I&fp=chrome&sni=amazon.com&sid=9dece5d16a&flow=xtls-rprx-vision#Vortex";
-            navigator.clipboard.writeText(sampleKey).then(() => {
-                const originalText = copyBox.innerHTML;
-                copyBox.innerHTML = '<span class="text-emerald-400 font-sans font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> ကူးယူမှု အောင်မြင်ပါသည် (Copied!)</span>';
-                setTimeout(() => {
-                    copyBox.innerHTML = originalText;
-                }, 2500);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        });
-    }
-
-    // 4. Scroll IntersectionObserver for Step Cards Fade-In Animation
+    // 3. Scroll IntersectionObserver for Step Cards Fade-In Animation
     const stepCards = document.querySelectorAll('.step-card');
     const observerOptions = {
         root: null,
